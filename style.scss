@@ -1,0 +1,355 @@
+$primary-color: #0e425f;
+$secondary-color:#EEA904;
+$font-stack: 'Inter', sans-serif;
+
+
+html {
+    font-size: 16px;
+}
+
+
+/* Reset some default browser styles */
+body, h1, h2, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #edebe9;
+    font-family: $font-stack;
+    text-align: center;
+    min-height: 100vh; /* Use min-height for better responsiveness */
+}
+
+/* Add some spacing to paragraphs */
+p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Common styles for headings except 'page-titles' */
+h1, h2, h3, h4 {
+    font-family: $font-stack;
+    font-weight: normal;
+    margin: 20px 0;
+    text-align: center; /* Center text */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center; /* Center text */
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center; /* Center text */
+}
+
+/* Style the main content */
+main {
+    padding: 20px;
+    text-align: left;
+    margin: 0 20px; /* Updated margin for better responsiveness */
+}
+
+/* Initially set the text color to white */
+header {
+    background-color: $primary-color;
+    color: #fff; /* Text color */
+    padding: 0.4rem 0.2rem 0rem 0.2rem;
+}
+
+/* Style for your name, sticking to the left */
+header h1 {
+    float: left;
+    margin: 0;
+    text-align: left; /* left text */
+}
+
+/* Styles for the navigation menu on the right */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    ul, ol {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    ul li a:hover {
+        color: $secondary-color; /* Gold color */
+    }
+}
+
+ /* Add Media Query for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px; /* Further reduce font size for smaller screens */
+    }
+
+    nav {
+        padding: 0.4rem 0.2rem;
+    }
+    
+    .logo {
+        width: 80px; /* Reduce logo size for smaller screens */
+    }
+}
+
+
+/* Common styles for images */
+img {
+    max-width: 100%;
+    min-width: 30%;
+    border-radius: 0%;
+    vertical-align: baseline;
+    height: auto; /* Maintain the image's aspect ratio */
+
+}
+
+/* Media Queries phone */
+@media (max-width: 768px) {
+    img {
+        width: 100%;
+    }
+
+    main {
+        margin: 0 10px; /* Adjust margin for smaller screens */
+    }
+    
+}
+
+/* Media Queries tablet */
+@media (min-width: 769px) and (max-width: 992px) {
+    img {
+        width: 50%;
+    }
+    
+    main {
+        text-align: left; /* left text for tablets */
+    }
+}
+
+/* Media Queries for computers */
+@media (min-width: 993px) {
+    main {
+        text-align: left; /* left text for larger screens */
+        margin: 0 300px; /* Add left and right margins for text content */
+    }
+}
+
+/* Specific styles for home button */
+.home__button {
+    background-color: #97cdc2;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 240px;
+    border: none;
+    text-align: center;
+    color: #151515;
+    text-decoration: none;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #75b4a1;
+    }
+  }
+
+/* Style for 'page-titles' */
+.page-titles {
+    font-family: $font-stack;
+    font-weight: normal;
+    margin-top: 1rem;
+}
+
+/* Common styles for aside content */
+aside {
+    text-align: center;
+}
+
+    /* Specific styles for aside image */
+    aside img {
+        display: right;
+        margin: 0 auto;
+        border-radius: 80%;
+    }
+
+/* Specific styles for contact section in About Section in order to add extra padding */
+#contact {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+}
+
+/* Specific styles for email contact link */
+.contact-email__link {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+/* Mouse-over link */
+.linkedin-block-footer a:hover {
+    color: $secondary-color;
+}
+
+/* CSS for making the descriptions appear beneath the images and ensuring all boxes are the same size */
+.project-pair {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Adjust the spacing between project pairs */
+    justify-content: center; /* Center content */
+
+    .project {
+        display: inline-block;
+        flex-basis: calc(46% - 20px); /* Ensure equal size, adjusting margin as needed */
+        margin: 10px;
+        text-decoration: none;
+        text-align: center; /* Center text */
+        padding: 20px;
+        background-color: #fff; /* Add a background color to each project box */
+        border: 1px solid #ddd; /* Add a border to separate boxes */
+
+        &:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        .project__image {
+            margin-bottom: 0.625rem; /* Add spacing between image and description */
+        }
+
+        .project__description {
+            text-align: left; /* Align descriptions to the left */
+        }
+    }
+}
+
+/* Visited link */
+.projects a:visited {
+    color: #000000;
+}
+
+
+/* Unvisited link */
+a:link {
+    color: #000000;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    flex: 1;
+}
+
+.image img {
+    max-width: 100px;
+}
+
+/* Underlines text clicked on */
+a:focus {
+    text-decoration: underline;
+}
+
+/* Add box shadow on focus for elements other than the header */
+*:focus {
+    box-shadow: 0 0 1.5px 1.5px $secondary-color;
+}
+
+/* Exempt the header from the box shadow */
+header *:focus {
+        box-shadow: none;
+    }
+
+/* Code for the text boxes that the images uses */
+.image-box {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+  }
+  
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+.info-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
+    color: #fff; /* Text color */
+    padding: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+.info-box h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+.info-box p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+
+  
+#image-container {
+    max-width: 500px;
+    margin: auto;
+    
+  }
+  
+img.javascript {
+    display: none;
+    max-width: 100%;
+    border-radius: 80%;
+    transition: opacity 0.5s ease-in-out; /* Add a smooth transition effect */
+    opacity: 0.8; /* Set opacity to 80% */
+  }
+  
